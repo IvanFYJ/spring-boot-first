@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/greps_list?useSSL=false
+    username: root
+    password: root1234
+    driver-class-name: com.mysql.jdbc.Driver
+  thymeleaf:
+    cache: false #关闭缓存
+    prefix: classpath:/views/ #添加路径前缀
+  profiles:
+    active: prod
+
+
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true #开启驼峰映射
+
+logging:
+  level:
+    #打印SQL信息
+    top.fanyongjian.springboothelloworld.mapper:debug
